@@ -64,7 +64,7 @@ class TTService():
 
 if __name__ == '__main__':
     import traceback
-    from SentimentEngine import SentimentEngine
+    #from SentimentEngine import SentimentEngine
 
     tmp_recv_file = 'tmp/server_received.wav'
     tmp_proc_file = 'tmp/server_processed.wav'
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     tts = TTService(*char_name["paimon"])
 
     # Sentiment Engine 情感分析
-    sentiment = SentimentEngine.SentimentEngine('SentimentEngine/models/paimon_sentiment.onnx')
+    #sentiment = SentimentEngine.SentimentEngine('SentimentEngine/models/paimon_sentiment.onnx')
     try:
         while 1:
             words = input("输入语音:")
@@ -88,6 +88,6 @@ if __name__ == '__main__':
             logger.debug(words, "生成完毕")
         # s.tts.read_save("这里传入文字", s.tmp_proc_file, s.tts.hps.data.sampling_rate)
     except Exception as e:
-        looger.error(e.__str__())
+        logger.error(e.__str__())
         logger.error(traceback.format_exc())
         raise e
