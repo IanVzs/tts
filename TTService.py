@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     ## hard coded character map
     char_name = {
-        'paimon': ['TTS/models/paimon6k.json', 'TTS/models/paimon6k_390k.pth', 'character_paimon', 1],
+        'paimon': ['models/paimon6k.json', 'models/paimon6k_390k.pth', 'character_paimon', 1],
     }
 
     # TTS 语音合成
